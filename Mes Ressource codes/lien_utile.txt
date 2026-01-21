@@ -1,0 +1,31 @@
+You don't have to know everything, if you know where to find it.
+When you do ask questions, you may look stupid.
+When you do NOT ask questions, you will STAY stupid.
+
+Application telephone pour controller voiture pyimplygui
+	https://funprojects.blog/2020/02/18/pysimplegui-quick-and-easy-interfaces/
+
+Utilisation DMA - DAC _ Arduino
+	https://www.avrfreaks.net/forum/sam4e-dacc-pdm-working-example
+
+Counter used to trigger DAC in Arduino Due
+	https://forum.arduino.cc/t/counter-used-to-trigger-dac-in-arduino-due/217631
+
+Example of driving ADC and DAC from timer for regular sampling
+	https://forum.arduino.cc/t/example-of-driving-adc-and-dac-from-timer-for-regular-sampling/199849
+
+Exemple d'implémentation de PID sur arduino utilisant MATLAB Simulink
+	https://www.cours-gratuit.com/cours-arduino/cours-d-introduction-a-arduino-matlab-et-simulink/download?chk=5ffbc70e29c3fa00a268bdd0da127976
+
+Oscilloscope Génial avec un arduino :
+	https://www.instructables.com/Oscilloscope-Arduino-Processing/
+
+Quelques Program avec transfo en Z, PID etc ..
+	https://www.wescottdesign.com/articles/zTransform/z-transforms.html
+
+Top Site pour electronique :
+	https://ultimateelectronicsbook.com/op-amp-voltage-buffer/
+	http://exam2ham.free.fr/donnees/AOP.html
+
+10 circuit AOP à connaître : 
+	https://www.arrow.com/fr-fr/research-and-events/articles/fundamentals-of-op-amp-circuits

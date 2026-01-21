@@ -1,0 +1,90 @@
+/*
+ * Code d'exemple "Blink Without delay" avec trois LEDs.
+ */
+
+// Déclare les broches sur lesquelles sont câblées les LEDs
+const int BROCHE_LED_1 = 13;
+const int BROCHE_LED_2 = 12;
+const int BROCHE_LED_3 = 11;
+
+// Nombre de millisecondes entre deux changements d'état des LED
+const unsigned long BLINK_INTERVAL_1 = 1000;
+const unsigned long BLINK_INTERVAL_2 = 500;
+const unsigned long BLINK_INTERVAL_3 = 2000;
+
+// Fonction setup(), appelée au démarrage de la carte Arduino
+void setup() {
+
+  // Configure les broches des LEDs en sortie
+  pinMode(BROCHE_LED_1, OUTPUT);
+  pinMode(BROCHE_LED_2, OUTPUT);
+  pinMode(BROCHE_LED_3, OUTPUT);
+  
+  // Configure l'état initial des LEDs
+  digitalWrite(BROCHE_LED_1, LOW);
+  digitalWrite(BROCHE_LED_2, LOW);
+  digitalWrite(BROCHE_LED_3, LOW);
+}
+
+// Fonction loop(), appelée continuellement en boucle tant que la carte Arduino est alimentée
+void loop() {
+  
+  // Sous traite les différentes tâches
+  task_led1();
+  task_led2();
+  task_led3();
+}
+
+void task_led1() {
+  static unsigned long previousMillisLed1 = 0;
+  static byte etatBrocheLed1 = LOW;
+  
+  unsigned long currentMillis = millis();
+  
+  // Si BLINK_INTERVAL_1 ou plus millisecondes se sont écoulés
+  if(currentMillis - previousMillisLed1 >= BLINK_INTERVAL_1) {
+    
+    // Garde en mémoire la valeur actuelle de millis()
+    previousMillisLed1 = currentMillis;
+    
+    // Inverse l'état de la LED 1
+    etatBrocheLed1 = !etatBrocheLed1;
+    digitalWrite(BROCHE_LED_1, etatBrocheLed1);
+  }
+}
+
+void task_led2() {
+  static unsigned long previousMillisLed2 = 0;
+  static byte etatBrocheLed2 = LOW;
+  
+  unsigned long currentMillis = millis();
+  
+  // Si BLINK_INTERVAL_2 ou plus millisecondes se sont écoulés
+  if(currentMillis - previousMillisLed2 >= BLINK_INTERVAL_2) {
+    
+    // Garde en mémoire la valeur actuelle de millis()
+    previousMillisLed2 = currentMillis;
+    
+    // Inverse l'état de la LED 2
+    etatBrocheLed2 = !etatBrocheLed2;
+    digitalWrite(BROCHE_LED_2, etatBrocheLed2);
+  }
+}
+
+void task_led3() {
+  static unsigned long previousMillisLed3 = 0;
+  static byte etatBrocheLed3 = LOW;
+  
+  unsigned long currentMillis = millis();
+  
+  // Si BLINK_INTERVAL_3 ou plus millisecondes se sont écoulés
+  if(currentMillis - previousMillisLed3 >= BLINK_INTERVAL_3) {
+    
+    // Garde en mémoire la valeur actuelle de millis()
+    previousMillisLed3 = currentMillis;
+    
+    // Inverse l'état de la LED 3
+    etatBrocheLed3 = !etatBrocheLed3;
+    digitalWrite(BROCHE_LED_3, etatBrocheLed3);
+  }
+}

@@ -1,0 +1,19 @@
+def list_serial_ports():
+    # Windows
+    if os.name == 'nt':
+        # Scan for available ports.
+        available = []
+        for i in range(256):
+            try:
+                s = serial.Serial(i)
+                available.append('COM' + str(i + 1))
+                s.close()
+            except serial.SerialException:
+                pass
+        return available
+
+
+
+def main():
+    # open serial port
+    ser = serial.Serial(list_serial_ports()[-1], 1000000)
